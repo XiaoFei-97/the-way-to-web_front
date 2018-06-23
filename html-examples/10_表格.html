@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表格</title>
+</head>
+<body>
+	<h3>产品列表</h3>
+
+ 	<!-- <table>可以设置边界border，宽度width和高度height -->
+	<table border="1" width="300" height="150">
+
+		<!-- <tr>用来设置表行 -->
+		<tr>
+			<!-- <th>用来设置表头 -->
+			<th>序号</th>
+			<th>产品名称</th>
+			<th>产品价格</th>
+			<th>产品数量</th>
+		</tr>
+
+		<tr>
+			<!-- <td>用来设置表格，并且可以使用属性align设置水平对齐方式，valign设置垂直对齐方式-->
+			<td align="center">1</td>
+			<td align="center">苹果</td>
+			<td valign="middle">$5.00</td>
+			<td valign="middle">1000</td>
+		</tr>
+
+		<tr>
+			<td align="center">2</td>
+			<td align="center">手机</td>
+			<td valign="middle">$500</td>
+			<td valign="middle">10</td>
+		</tr>
+	</table>
+
+	<h3>个人简历表</h3>
+	<!-- table>(tr>td*5)*6 -->
+	<table border="1" width="600" height="300">
+		<tr>
+			
+			<!-- colspan 设置单元格水平合并，rowspan 设置单元格垂直合并  -->
+			<td colspan="5" align="left"><b>基本信息</b></td>
+		</tr>
+		<tr>
+			<td width="18%">姓名</td>
+			<td width="18%"></td>
+			<td width="18%">性别</td>
+			<td width="18%"></td>
+			<td rowspan="5" width="28%"><img src="images/bg.jpg" alt="人物图片"></td>
+		</tr>
+		<tr>
+			<td>民族</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>政治面貌</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>籍贯</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>电子邮箱</td>
+			<td></td>
+			<td></td>
+			<td></td> 
+		</tr>
+	</table>
+</body>
+</html>

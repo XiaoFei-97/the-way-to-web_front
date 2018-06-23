@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单</title>
+</head>
+<body>
+	<h3>用户注册</h3>
+	<!-- 默认是get的方法提交,但是会暴露敏感信息,所以要用post的方法 -->
+	<form action="http://wwww.itcast.cn" method="post">
+		<div>
+			<!-- lable的for属性可以增加用户体验 -->
+			<label for="user">用户名:</label>
+			<!-- text类型单行文本输入框 -->
+			<input type="text" name="username" id="user" value="jack">
+		</div>
+		<br />
+
+		<div>
+			<label for="pwd">密码:</label>
+			<!-- password表示密码输入框 -->
+			<input type="password" name="pwd" id="pwd">
+		</div>
+		<br>
+		<div>
+			<label>性别：</label>
+			<!-- 单选框的名字要相同 -->
+			<!-- radio表示单选框 -->
+			<input type="radio" name="gender" id="male" value="0"><label for="male">男</label>
+			<input type="radio" name="gender" id="female" value="1"><label for="female">女</label>
+		</div>
+		<br />
+
+		<div>
+			<label>爱好：</label>
+			<!-- 多选框的名字要相同 -->
+			<!-- checkbox表示多选框 -->
+			<input type="checkbox" name="like" id="game" value="game"><label for ="game">游戏</label>
+			<input type="checkbox" name="like" id="shopping" value="shopping"><label for="shopping">逛街</label>
+			<input type="checkbox" name="like" id="sleeping" value="sleeping"><label for="sleeping">睡觉</label>
+		</div>
+		<br />
+
+		<div>
+			<label>籍贯：</label>
+			<!-- select定义下拉列表选择 -->
+			<select name="size">
+				<option value="0">北京</option>
+				<option value="1">上海</option>
+				<option value="2">广州</option>
+				<option value="3">深圳</option>
+			</select>
+		</div>
+		<br />
+
+		<div>
+			<label>照片：</label>
+			<!-- file表示上传照片或文件等资源  -->
+			<input type="file" name="">
+		</div>
+		<br />
+
+		<div>
+			<!-- textarea表示多行文本输入 -->
+			<label>个人描述:</label>
+			<textarea name="info"></textarea>
+		</div>
+			
+		<!-- submit定义提交按钮   -->
+		<!-- <input type="submit" name="" value="提交"> -->
+
+		<!-- ireset定义重置按钮  -->
+		<input type="reset" name="" value="重置">
+
+		<input type="button" name="" value=按钮>
+		<!-- hidden可以存一些值在页面上 -->
+		<input type="hidden" name="hid" value="10000">
+		<!-- 图片的方式做提交 -->
+		<input type="image" name=""	src="images/box02.jpg">
+	</form>
+</body>
+</html>
