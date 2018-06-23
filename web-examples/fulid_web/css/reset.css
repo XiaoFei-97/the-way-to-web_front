@@ -1,0 +1,45 @@
+body,h1,h2,h3,h4,h5,h6,ul,dl,dd,form,select,input{
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size: 100%;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+img{
+	border: none;
+}
+
+em{
+	font-style: normal;
+}
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
+.clearfix:before,.clearfix:after{
+	content: "";
+	display: table;
+}
+
+.clearfix:after{
+	clear:both;
+}
+
+/*兼容ie*/
+.clearfix{
+	zoom:1;
+}

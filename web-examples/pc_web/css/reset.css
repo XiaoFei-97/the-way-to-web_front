@@ -1,0 +1,55 @@
+/*样式重置表*/
+/*清除原有标签的间距*/
+body,ul,p,h1,h2,h3,h4,h5,h6,dl,dd,input,select,form{
+	margin: 0;padding: 0;
+}
+
+/*因为每个标题标签的字体大小不一样，所以统一字体大小*/
+h1,h2,h3,h4,h5,h6{
+	font-size: 100%;/*100%会继承body标签的字体大小*/
+}
+
+/*去掉无序列表的项目图标*/
+ul{
+	list-style:none;
+
+}
+
+/*去掉em标签的默认倾斜*/
+em{
+	font-style: normal;
+}
+
+/*去掉a标签链接的下划线*/
+a{
+	text-decoration: none;
+}
+
+/*清除img图片做链接时的边框*/
+img{
+	border: none;
+}
+
+/*这是清除margin-top塌陷的类标签*/
+.clearfix:before,.clearfix:after{
+	content:'';
+	display: table;
+}
+
+/*与上面的after共同构成消除浮动的方法*/
+.clearfix:after{
+	clear: both;
+}
+
+/*设置zoom:1可以在IE6下清除浮动、解决margin导致的重叠等问题*/
+.clearfix{
+	zoom:1;
+}
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
