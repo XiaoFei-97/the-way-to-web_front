@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3新选择器</title>
+	<style type="text/css">
+		li{
+			background-color: gold;
+			margin-bottom: 10px;
+		}
+
+		/*使用E：nth-child(n)可以快速选择该元素的子元素样式，这种情况就完全不需要在html结构中添加*/
+		/*E：nth-child(2n)还可以写出代数式运算*/
+		/*li:nth-child(1){
+			background-color: green;
+		}
+
+		li:nth-child(5){
+			background-color: pink;
+		}*/
+
+		/*与child类似*/
+		li:nth-of-type(1){
+			background-color: green;
+		}
+
+		.box div{
+			background-color: gold;
+			margin:10px;
+		}
+
+		/*先去结构中找box标签下的第四个子元素，发现不是div，则不进行操作*/
+		.box div:nth-child(4){
+			background-color: green;
+		}
+
+		/*type找的是第四个div，而不是第四个子元素*/
+		.box div:nth-of-type(4){
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<h3>ul容器</h3>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+	</ul>
+
+	<h3>div容器</h3>
+	<div class="box">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<p>p标签</p>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+	</div>
+</body>
+</html>

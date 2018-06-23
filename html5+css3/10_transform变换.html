@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transform变换</title>
+	<style type="text/css">
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+			margin:50px auto;
+			transition: all 1s ease;
+		}
+
+		.box:hover{
+			/*也表示偏移,不会影响文档流,且性能left和top要好*/
+			transform: translate(100px,100px);
+		}
+
+		.box2{
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+			margin:50px auto;
+			transition: all 1s ease;
+		}
+
+		.box2:hover{
+			/*旋转了30度,是一个静态效果,默认是z轴*/
+			transform: rotate(30deg);
+		}
+
+		.box3{
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+			margin:50px auto;
+			transition: all 1s ease;
+		}
+		.box3:hover{
+			/*横向缩放0.5,纵向缩放0.8*/
+			transform: scale(0.5 0.8);
+		}
+
+		.box4{
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+			margin:50px auto;
+			transition: all 1s ease;
+		}
+		.box4:hover{
+			/*横向斜切45度,纵向斜切0度*/
+			transform: skew(45deg,0);
+		}
+
+	</style>
+</head>
+<body>
+	<p>都是没有过渡动画的</p>
+	<div class="box"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<div class="box4"></div>
+</body>
+</html>

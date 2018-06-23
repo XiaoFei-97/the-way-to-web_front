@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3过渡动画</title>
+	<style type="text/css">
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: gold;
+
+			/*第一个就是属性，也就是对宽或高做动画*/
+			/*第二个就是动画持续的时间*/
+			/*第三个就是运动方式*/
+			/*第四个就是延迟*/
+			/*transition: width 500ms ease,height 500ms ease 500ms,background-color 500ms ease 1s/*, border-radius 500ms ease 1500ms; */
+
+			transition: all 500ms ease;
+		}
+		.box:hover{
+			width: 500px;
+			height: 300px;
+			background-color: red;
+			border-radius: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

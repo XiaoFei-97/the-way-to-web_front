@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css权重</title>
+	<style type="text/css">
+		/*
+		权重值为10000+1
+		 */
+		div{
+			color: red!important;  加了这个样式属性后，是权重最大的为10000,否则为1
+		}*/
+
+		#box{
+			color: blue; /*权重值为100*/
+		}
+
+		.con{
+			color: green; /*权重值为10*/
+		}
+
+	</style>
+</head>
+<body>
+	<!-- 可以看出标签选择器和i选择器同时作用在div上 -->
+	<!-- 那么最后的结果是蓝色，说明id选择器的权重更高 -->
+	<div id="box">这是第一个div元素</div>
+
+	<!-- 可以看出结果为粉色，那么又能得出内联样式的权重比id选择器大，权重值为1000 -->
+	<div id="box" style="color: pink">这是第二个div元素</div>
+
+	<div id="box" style="color: pink" class="con">这是第二个div元素</div>
+</body>
+</body>
+</html>

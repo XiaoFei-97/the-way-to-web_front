@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3选择器</title>
+	<style type="text/css">
+		input:disabled{
+			background-color: red;
+		}
+
+		input:enabled{
+			background-color: green;
+		}
+
+		/*如果选择了label就会变红色*/
+		/*input:checked + label{
+			color: red;
+		}
+*/
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: gold;
+			display: none;
+		}
+
+		input:checked + div{
+			display:block;   /* 如果勾选了checkbox就会出现div*/
+		}
+	</style>
+</head>
+<body>
+	<input type="text" name="" disabled>  <!-- 可用的表单 -->
+	<input type="text" name=""> <!-- 不可用的表单 -->
+
+	<input type="checkbox" name=""><label>选择的状态</label>
+	<input type="checkbox" name=""><div class="box">这是一个div元素</div>
+</body>
+</html>

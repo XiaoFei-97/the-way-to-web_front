@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>元素旋转</title>
+	<style type="text/css">
+
+		/*旋转方向判断:
+		1.x轴向右,y轴向下,z轴向屏幕外 
+		2.让轴向对着自己,顺时针方向就是该轴向的旋转方向*/
+		.box{
+			width: 300px;
+			height: 300px;
+			margin: 50px auto;
+			background-color: gold;
+			transition: all 500ms ease;
+			transform:perspective(800px) rotateX(0deg); 
+		}
+		.box:hover{
+			/*
+			z轴旋转
+			transform: rotate(45deg);
+
+			*/
+			/*透视图的关键就是近大远小*/
+			/*perspective表示透视度*/
+			transform:perspective(800px) rotateX(45deg); /*但是只有变扁的效果,其实是在空间里发生了旋转,需要用透视才看得见*/
+
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>
