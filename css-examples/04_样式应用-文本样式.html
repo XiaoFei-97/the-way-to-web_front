@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>样式应用-文本样式</title>
+
+	<!-- 使用style标签,然后利用div包含这些属性即ok,称为选择器 -->
+	<style type="text/css">
+		div{
+			color:red; /*颜色为红*/
+			font-size: 25px; /*字体大小25*/
+			font-family: 'Microsoft Yahei'; /*微软雅黑*/
+			line-height:30px; /*行高30*/
+			text-indent:40px; /*首行缩进40px*/
+		}
+		em{
+			font-style: normal; /*设置不倾斜*/
+		}
+
+		span{
+			font-weight: bold; /*设置文字加粗*/
+		}
+
+		h2{
+			/*font-weight: normal; /*设置文字不加粗*/
+			/*合体写法:normal可以省去,是否加粗 字号/行高 字体;*/
+			font:normal 30px/40px 'Microsoft Yahei';
+			text-align: center;
+			/*color: gold;*/
+			/*rgb法*color: rgb(255,0,0);*/
+			/*16进制表示法*/
+			color: #ff0000;
+		}
+
+		a{
+			/*设置链接是否带有下划线,默认情况下是underline*/
+			text-decoration: none
+		}
+	</style>
+</head>
+
+<body>
+
+	<a href="http://www.itcast.cn" title="链接至传智">传智播客</a>
+
+	<h2>文本样式演示</h2>
+	<div>
+		为了让网页元素的样式更加丰富，也为了让网页的内容和样式能拆分开，<span>CSS</span>由此思想而诞生，CSS是 <em>Cascading Style Sheets </em>的首字	母缩写，意思是层叠样式表。有了CSS，html中大部分表现样式的标签就废弃不用了，html只负责文档的结构和内容，表现形式完全交给<b>CSS</b>，html文档变得更加简洁。
+	</div>
+	<br>
+
+	<div>
+		选择器是将样式和页面元素关联起来的名称，属性是希望设置的样式属性每个属性有一个或多个值
+	</div>
+</body>
+</html>

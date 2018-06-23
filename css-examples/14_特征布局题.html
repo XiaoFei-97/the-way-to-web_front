@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>特种布局题</title>			
+	<style type="text/css">
+		.menu{
+			width: 960px; 
+			height: 40px;
+			margin: 50px auto 0;  /*表示居中,离上边界50px*/
+			padding: 0;
+			font-size: 0;
+			list-style: none;
+			background-color: #55a8ea;
+			border: 1px solid #55a8ea;
+		}
+
+		/*display属性*/
+		/*.menu li{
+			width: 100px;
+			height: 40px;
+			font-size: 14px;
+			text-align: center;
+			line-height: 40px;
+			display: inline-block;
+		}*/
+
+		/*浮动的方法*/
+		.menu li{
+			float: left;
+			width: 100px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+		}
+
+		/*伪类选择器*/
+		.menu li:hover{
+			background-color: #00619f;
+		}
+
+		.menu a{
+			text-decoration: none;
+			color: #fff;
+			font-family: 'Microsoft Yahei';
+			font-size: 14px;
+		}
+
+	</style>
+</head>
+<body>
+	<ul class="menu">
+		<li><a href="">首页</a></li>
+		<li><a href="">网站建设</a></li>
+		<li><a href="">程序开发</a></li>
+		<li><a href="">网络营销</a></li>
+		<li><a href="">企业VI</a></li>
+		<li><a href="">案例展示</a></li>
+		<li><a href="">联系我们</a></li>
+	</ul>
+</body>
+</html>
+

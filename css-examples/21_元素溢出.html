@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>元素溢出</title>
+	<style type="text/css">
+		.con{
+			width: 500px;
+			height: 300px;
+			border: 1px solid #333;
+			margin: 50px auto 0;
+			
+			/*设置元素溢出:visible hidden scroll auto inherit;*/
+			/*overflow: hidden; 隐藏溢出的部分*/
+			/*overflow: scroll; 不管是否溢出都设置滚动条*/
+			/*overflow: auto; 如果有溢出旧显示滚动条,如果没有,就不显示*/
+		}
+
+		.box{
+			width: 400px;
+			height: 600px;
+			background-color: gold;
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div class="box">
+		</div>
+	</div>
+</body>
+</html>

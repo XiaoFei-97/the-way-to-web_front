@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>类选择器</title>
+	<style type="text/css">
+		.red{
+			color: red;
+		}
+
+		.bold{
+			font-weight: bold;
+		}
+	
+		.yahei{
+			font-family: Microsoft Yahei;
+		}
+		#box{
+			color: green;
+		}	
+	</style>
+</head>
+<body>
+
+	<!-- 最常用的选择器,可以用在多个选择器上 -->
+	<!-- 还可以被组合使用,即一个元素使用多个类 -->
+	<div class="red bold yahei">这是第一个div</div>
+	<!-- 在id选择器与类选择器用在一个元素上时,由于id选择器权重比类选择器大,所以会只执行id选择器 -->
+	<div id="box" class="red">这是第二个div</div>
+	<div class="red">这是第三个div</div>
+</body>
+</html>

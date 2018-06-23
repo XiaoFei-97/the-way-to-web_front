@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内联元素</title>
+	<style type="text/css">
+	/*a、span、em、b、strong、i等等都是内联元素*/
+		.con,.con2{
+			width: 500px; /*宽度500px*/
+			height: 300px; /*高度300px*/
+			border: 1px solid #333; /*边界1px,颜色的16进制为333*/
+			margin: 50px auto 0; /*外间距(盒子与盒子的距离)上下为50px,左右为0*/
+			font-size: 0; /*字体大小为0,是消除内联元素间隙的办法*/
+		}
+
+
+		.con a{
+			background-color: gold; /*背景色为金色*/
+			text-decoration: none; /*去掉下划线*/
+			font-size: 30px; /*字体大小设置为30px*/
+			/*在内联元素中,设置宽高没有作用*/
+			/*width: 500px;
+			height: 300px;*/
+			/*margin-left: 30px;
+			margin-right: 30px;
+
+			top和bottom不起作用
+			margin-top: 30px;
+			margin-bottom: 30px;*/
+/*
+			padding-left: 30px;
+			padding-right: 30px;*/
+			/*也不支持top和bottom*/		
+		}
+
+		.con2{
+			text-align: center; /*文本居中*/
+			line-height: 300px; /*高度为300px*/
+		}
+
+		.con2 a{
+			font-size: 20px; /*字体大小设置为20px*/
+			background-color: gold; /*背景色为金色*/
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<!-- 1.解决内联元素间隙,去掉内联元素之间的换行 -->
+		
+		<!-- <a href="#">这时一个a标签</a><a href="#">这时二个a标签</a><a href="#">这时三个a标签</a><a href="#">这时四个a标签</a><a href="#">这时五个a标签</a><a href="#">这时六个a标签</a> -->
+
+		<!-- 2.将内联元素的父级设置font-size为0，内联元素自身再设置font-size -->
+		<a href="#">这时一个a标签</a>
+		<a href="#">这时二个a标签</a>
+		<a href="#">这时三个a标签</a>
+		<a href="#">这时四个a标签</a>
+		<a href="#">这时五个a标签</a>
+		<a href="#">这时六个a标签</a>
+
+	</div>
+
+	<div class="con2">
+		<a href="#">这是一个a标签</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>菜单</title>	
+	<style type="text/css">
+		.menu{
+			/*需要设置的有长,宽,外间距,列表类型,内间距,字体大小*/
+			width: 694px; 
+			height: 50px;
+			margin: 50px auto 0;
+			list-style: none;
+			padding: 0;
+			font-size: 0;
+		}
+
+		/*伪类选择器*/
+		.menu li{
+			/*需要设置的有以内联块元素显示,长,宽,字体大小,文本模式,高度*/
+			display: inline-block;
+			width: 98px;
+			height: 48px;
+			border: 1px solid gold;
+			font-size: 16px;
+			margin-right: -1px;
+			text-align: center;
+			line-height: 48px;
+		}
+
+		.menu li:hover{
+			background-color: blue;
+		}
+
+		.menu a{
+			font-family: 'Microsoft Yahei';
+			color: pink;
+			text-decoration: none;
+		}
+
+		.menu a:hover{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<ul class="menu">
+		<li><a href="">首页</a></li>
+		<li><a href="">公司简介</a></li>
+		<li><a href="">解决方案</a></li>
+		<li><a href="">公司新闻</a></li>
+		<li><a href="">行业动态</a></li>
+		<li><a href="">招纳贤才</a></li>
+		<li><a href="">联系我们</a></li>
+	</ul>
+</body>
+</html>

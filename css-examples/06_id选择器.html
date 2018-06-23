@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>id选择器</title>
+	<style type="text/css">
+		/*标签选择器*/
+		div{
+			color: red;
+		}
+		/*id选择器*/
+		#box{
+			color: gold;
+		}
+	</style> 
+</head>
+<body>
+	<div >这是第一个div</div>
+	<!-- 第二个div也会受第一个div的影响,但是由于层叠样式表把第一层覆盖了 -->
+	<div id="box">这是第二个div</div>
+
+	<!-- 是不允许通过的,页面上不允许两个元素id名相同 -->
+	<div id="box">这是第三个div</div>
+
+	<!-- 要想同时使用一个样式,则不能用id选择器,几乎不用 -->
+	<div>要想同时使用一个样式,则不能用id选择器</div>
+</body>
+</html>

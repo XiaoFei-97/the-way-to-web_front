@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内联块元素</title>
+	<style type="text/css">
+		.con{
+			width: 500px; /*宽度500px*/
+			height: 300px; /*高度300px*/
+			border: 1px solid #333; /*边界为1px,颜色为16进制333*/
+			margin: 50px auto 0; /*外间距50px,左右自动为0*/
+		}
+
+		.con a{
+			background-color: gold; /*背景色为金色*/
+			width: 150px; /*宽度为150px*/
+			height: 50px; /*高度为50px*/
+			display: inline-block; /*以内联块元素显示*/
+			margin:10px; /*外间距都为10px*/
+		}
+
+		.con span{
+			display: inline; /*内联元素显示*/
+			background-color: gold; /*背景色为金色*/
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<a href="#">这时一个a标签</a>
+		<a href="#">这时二个a标签</a>
+		<a href="#">这时三个a标签</a>
+		<a href="#">这时四个a标签</a>
+		<a href="#">这时五个a标签</a>
+		<a href="#">这时六个a标签</a>
+		<span>这时一个span标签</span>
+
+	</div>
+</body>
+</html>

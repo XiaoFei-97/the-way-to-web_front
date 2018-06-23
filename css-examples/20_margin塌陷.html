@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>margin塌陷</title>
+	<style type="text/css">
+		.con{
+			width: 300px;
+			height: 200px;
+			background-color: gold;
+			/*line-height: 200px; 只针对于文本,不能居中了*/
+			/*padding-top: 50px;*/
+
+			/*解决方法1:外部盒子设置一个边框;
+			border: 1px solid gold;*/
+
+			/*解决方法2:外部盒子设置 overflow:hidden;*/
+			/*overflow: hidden;*/
+
+		}
+
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			margin-top: 50px;  /*把50px给了外边界的con,也就是margin-top缺陷*/
+		}
+
+		/*解决方法3:使用伪元素类,常用方法解决margin-top塌陷;*/
+		.clearfix:before{
+			content:"";
+			display: table;
+		}
+	</style>
+</head>
+<body>
+	<div class="con clearfix">
+		<div class="box">
+			
+		</div>
+	</div>
+</body>
+</html>
