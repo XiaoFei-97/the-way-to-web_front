@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>本地存储</title>
+	<script type="text/javascript">
+		
+		// 不需要服务器环境,可以达到5M
+		// 但如果开启了无痕浏览会导致功能失效,只能使用cookie
+		localtorage.setItem('mystorage','ok'); //一直存在
+		sessionStorage.setItem('pwd','123');
+
+		alert(localtorage.mystorage);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

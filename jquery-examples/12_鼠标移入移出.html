@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标移入移出</title>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			// 虽然可以达到效果,但是如果重复移入移出多次,会导致鼠标已经离开元素,盒子还在动的现象
+			// 在this后面只要加上stop即可解决
+			$('#div1').mouseover(function(){
+				$(this).stop().animate({marginTop:50});
+			});
+
+			$('#div1').mouseout(function(){
+				$(this).stop().animate({marginTop:100});
+			})
+
+			// 将mouseover和mouseout合并为hover
+			// $('div1').hover(function(){
+			// 	$(this).stop().animate({marginTop:50});
+			// },function(){
+			// 	$(this).stop().animate({marginTop:100});
+			// });
+		})
+	</script>
+	<style type="text/css">
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+			margin: 100px auto 0;
+		}
+
+		.son{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			margin-top: 50px;
+		}
+
+		.clearfix:before{
+			content: "";
+			display:table;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box clearfix" id="div1">
+		<div class="son"></div>
+	</div>
+</body>
+</html>

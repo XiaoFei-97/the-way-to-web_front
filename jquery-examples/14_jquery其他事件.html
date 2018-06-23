@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery其他事件</title>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		/*
+		window.onload = function(){
+
+		}
+		上面等同于下面
+		$(window).load(function(){
+
+		});
+		*/
+
+		/*
+		$(document).ready(function(){
+
+		});
+		// 上面等同于下面
+		$(function(){
+
+		});
+		*/
+	
+		// 窗口改变尺寸的时候就触发
+		$(window).resize(function(){
+			console.log('2');
+		})
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>

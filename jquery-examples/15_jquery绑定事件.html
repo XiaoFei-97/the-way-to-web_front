@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery绑定事件</title>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			// $('.btn').click(function(){
+
+			// })
+			
+			/*
+			优点：1.这与click事件的最大区别就是其可以加入更多的事件来触发
+				 2.可以自定义事件，类似于自定义函数
+				 3.自定义事件只能用bind来实现
+			*/
+			
+			$('#btn').bind('click mouseover',function(){
+				alert('hello!');
+
+				// unbind解除绑定过的事件
+				$(this).unbind('mouseover');
+			});
+
+
+			// 自定义hello事件
+			$('#btn').bind('hello',function(){
+				alert('hello!');
+			});
+
+			$('#btn2').click(function(){
+				$('#btn').trigger('hello');
+			});
+			$('#btn2').bind('click',function(){
+				$('#btn').trigger('hello');
+			})
+
+		})
+	</script>
+</head>
+<body>
+	<input type="button" name="" value="按钮" id="btn">
+	<input type="button" name="" value="按钮2" id="btn2">
+</body>
+</html>

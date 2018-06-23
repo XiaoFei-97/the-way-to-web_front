@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery加载</title>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+
+	<script type="text/javascript">
+		
+		window.onload = function(){
+			var oDiv = document.getElementById('div');
+
+			alert(oDiv.innerHTML());
+		}
+
+		// onload很慢，要用ready
+		// $(document).ready(function(){
+		// 	var $div = $('#div');
+		// 	alert($div.html()+'jquery');
+		// });
+
+		// 也就是把(document).ready省略
+		$(function(){
+
+			var $div = $('#div');
+		 	alert($div.html()+'jquery');
+
+		}); //不加分号和加分号都可以
+	</script>
+</head>
+<body>
+	<div id="div">这是一个div元素</div>
+</body>
+</html>

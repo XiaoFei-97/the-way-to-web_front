@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery事件冒泡</title>
+	<style type="text/css">
+		.grandfather{
+			width: 300px;
+			height: 300px;
+			background-color: green;
+			position: relative;
+		}
+		.father{
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+		}
+
+		.son{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+			left: 0;
+			top: 400px;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+
+	// 在一个对象上触发某类事件（比如单击onclick事件），如果此对象定义了此事件的处理程序，那么此事件就会调用这个处理程序，如果没有定义此事件处理程序或者事件返回true，那么这个事件会向这个对象的父级对象传播，从里到外，直至它被处理（父级对象所有同类事件都将被激活），或者它到达了对象层次的最顶层，即document对象	
+		
+		$(function(){
+			$('.grandfather').click(function(){
+				alert('3');
+			});
+
+			// 会默认创建一个event对象
+			$('.father').click(function(event){
+				alert('2');
+
+			});
+
+			$('.son').click(function(){
+				alert('1');
+				// 通过 event.stopPropagation() 来阻止事件冒泡
+				// event.stopPropagation();
+				
+				// 此办法既解决了事件冒泡，也解决了默认行为
+				return false;
+			});
+
+			$(document).contextmenu(function(event) {
+				// 阻止默认行为  event.preventDefault();右键
+   				 // event.preventDefault();
+
+   				return false;
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<div class="grandfather">
+		<div class="father">
+			<div class="son"></div>
+		</div>
+	</div>
+</body>
+</html>

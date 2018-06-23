@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery选择器2</title>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			// next() 同级的下一个元素，nextAll同级下的所有元素
+			// prev() 同级的上一个元素，prevAll同级上面的所有元素
+			$('#div').next().css({color:'red'});
+
+			$('#div').nextAll('p').css({color:'red'});
+			// nextAll里面是过滤p标签,但是next并不能
+			// 
+			$('#span01').parent().css({width:'100px',height:'100px',background:'gold'})
+		})
+
+	</script>
+</head>
+<body>
+	<div id="div">这是一个div元素</div>
+	<div>这是第二个div元素</div>
+	<p>这是一个p元素</p>
+
+	<div id="div2">
+		<a href="#">百度网</a>
+		<span id="span01">span元素</span>
+	</div>
+</body>
+</html>
