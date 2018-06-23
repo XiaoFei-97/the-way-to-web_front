@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>h5 音频 视频</title>
+</head>
+<body>
+	<!-- src是音频资源，controls是显示播放,autoplay表示自动播放,loop循环，preload预加载，muted静音 -->
+	<!-- 但因为在每个浏览器中的显示不一样，所以不建议使用controls，这是开发不允许的 -->
+	<audio src="../source/audio.mp3" controls autoplay loop preload muted>
+	</audio>
+
+
+	<!-- 两种表现方法 -->
+	<!-- 这里并不是运行完第一个就运行第二个，而是防止格式不兼容多存放了几种情况 -->
+	<!-- 支持ogg,wav，mp3 -->
+	<audio controls autoplay loop preload muted>
+		<source src="../source/audio.mp3" type="">
+		<source src="../source/audio02.mp3" type="">
+	</audio >
+
+	<!-- 支持ogg,mp4,webM，但国内一般用flv格式 -->
+	<video controls autoplay loop preload width="600" height="400">
+		<source src="../source/mov.mp4" type="">
+
+		<source src="../source/mov.ogg" type="">
+	</video>
+</body>
+</html>

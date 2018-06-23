@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>em单位</title>
+	<style type="text/css">
+		
+		.box{
+			width: 20em;
+			height: 10em;
+			background-color: gold;
+			margin: 50px auto 0;
+			font-size: 20px;
+		}
+
+		.box2{
+			/*一个em等于字体的大小，也就是10em*/
+			/*他的好处是可以对整体元素进行等比缩放，但只能对当前元素，使用rem可以对所有元素*/
+			width: 20em;
+			height: 10em;
+			background-color: gold;
+			margin: 50px auto 0;
+			font-size: 20px;
+		}
+
+		p{
+			font-size: 18px;
+			text-indent: 36px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="box2"></div>
+	<p>响应式布局就是使用媒体查询的方式，通过查询浏览器宽度，不同的宽度应用不同的样式块，每个样式块对应的是该宽度下的布局方式，从而实现响应式布局。响应式布局的页面可以适配多种终端屏幕（pc、平板、手机）。</p>
+</body>
+</html>

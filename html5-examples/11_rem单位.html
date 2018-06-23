@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- 此时1个rem单位就是20px -->
+<html lang="en" style="font-size: 20px">
+<head>
+	<meta charset="UTF-8">
+	<title>rem单位</title>
+	<style type="text/css">
+		.box{
+			width: 20rem;
+			height: 10rem;
+			background-color: gold;
+			margin: 2.5rem auto 0;
+			font-size: 20px;
+		}
+
+		.box2{
+			/*此时的宽高都是参照rem来调整*/
+			width: 20rem;
+			height: 10rem;
+			background-color: gold;
+			margin: 2.5rem auto 0;
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="box2"></div>
+</body>
+</html>
