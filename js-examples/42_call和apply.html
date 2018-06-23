@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>call和apply</title>
+	<script type="text/javascript">
+		function aa(a,b){
+			alert('my this is'+this,+'my a is'+a+',my b is'+b);
+		}
+
+		// 功能：改变函数this的指向
+		// 可以改变函数执行的this为abc
+		aa.call('abc',2,3);
+
+		// 与上面类似
+		aa.apply('abc',[2,3]);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js中括号操作属性class</title>
+	  
+	<script type="text/javascript">
+		window.onload = function(){
+			var oDiv1 = document.getElementById('div1');
+
+			var attr = 'color';
+
+			// .会从style属性中找attr,但是[attr]就会找出定义的变量
+			oDiv1['style'][attr] = 'red';
+
+			// 通过innerHTML可以读写元素中包裹的内容
+			alert(oDiv1.innerHTML);
+
+			var oDiv2 = document.getElementById('div2');
+
+			// 这样会把内容插入到元素中
+			oDiv2.innerHTML = '这是第二个div元素'
+
+			oDiv2.innerHTML = "<a href='http://www.itcast.cn'>传智播客</a>"
+		}
+	</script>
+</head>
+<body>
+	<div id="div1">这是一个div元素</div>
+	<div id="div2"></div>
+</body>
+</html>

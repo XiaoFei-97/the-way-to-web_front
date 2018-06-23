@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数return关键字</title>
+	<script type="text/javascript">
+		
+		window.onload = function(){
+			var oInput01 = document.getElementById('input01');
+			var oInput02 = document.getElementById('input02');
+			var oBtn = document.getElementById('btn');
+
+			// 但这里只是字符串的拼接
+			oBtn.onclick = function(){
+				var num1 = oInput01.value;
+				var num2 = oInput02.value;
+
+				var sum = add(num1,num2);
+
+				alert(sum);
+			}
+
+			// 需要使用parseInt来转化为数字类型
+			function add(a,b){
+				var c = parseInt(a) + parseInt(b);
+
+				// return 返回函数的值，同时结束函数的运行
+				return c;
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="input01" onc>
+	<input type="text" name="" id="input02">
+	<input type="button" name="" value="相加" id="btn">
+</body>
+</html>

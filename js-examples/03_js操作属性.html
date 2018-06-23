@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基本语法</title>
+	<script type="text/javascript">
+		
+		// window.onload表示加载完文档再执行函数document.getElementById
+		window.onload = function(){
+			document.getElementById('div1').title = '我看到了!';
+
+			// 功能是可以被确定,但太冗长
+			document.getElementById('link1').href = 'http://www.baidu.com';
+			document.getElementById('link1').title = '去到百度网';
+
+			// 用变量来代替,可以减去冗长
+			var oA = document.getElementById('link1');
+			oA.href = 'http://www.baidu.com';
+			oA.title = '去到百度网';
+
+			// 表示读该属性
+			alert(oA.title);
+		}
+	</script>
+</head>
+<body>
+	<div id="div1" class="div1" title="div元素,看到了吗">这是一个div元素</div>
+	<a href="#" id="link1">百度网</a>
+</body>
+</html>

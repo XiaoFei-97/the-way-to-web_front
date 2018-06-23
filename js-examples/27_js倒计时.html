@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js倒计时</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oDiv = document.getElementById('div1');
+
+			function timego(){
+				// 这个时间必须从服务器来取,否则用户会修改时间的值,会引发问题
+				var now = new Date();
+
+				var future = new Date(2018,4,13,24,0,0);
+
+				//alert(future-now);
+				var lefts = parseInt((future-now)/1000); //转化成秒
+				//alert(lefts);
+				var day = parseInt(lefts/86400);
+				//alert(day);
+				var hour = parseInt((lefts%86400)/3600);
+				//alert(hour);
+				var minute = parseInt(((lefts%86400)%3600)/60);
+				//alert(minute);
+				var second = lefts%60;
+				//alert(second);
+				
+				if(lefts<=0){
+
+					// 时间过期则跳转	
+					window.location.herf = "http://www.itcast.com"
+				}
+				oDiv.innerHTML = '距离2018年5月13日晚24时还有:'+toDouble(day)+'天'+toDouble(hour)+'小时'+toDouble(minute)+'分钟'+toDouble(second)+'秒';
+			}
+			timego();
+
+			// 一秒钟变一次
+			setInterval(timego,1000);
+		}
+
+		function toDouble(num){
+			if(num<10){
+				return '0'+num;
+			}
+			else{
+				return num;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>

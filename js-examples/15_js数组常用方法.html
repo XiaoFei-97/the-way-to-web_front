@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js数组常用方法</title>
+	<script type="text/javascript">
+		
+		var aRr = [1,2,3,4];
+
+		// join用来将列表转化成字符
+		var sTr = aRr.join('-'); //与python列表连接类似，-来连接数组
+		var sTr2 = aRr.join(''); //不采用符号连接，即转化为字符
+
+		// alert(sTr);
+		// alert(sTr2);
+		
+		// push和pop表示从数组后面添加或删除元素
+		aRr.push(5); //弹出1,2，3,4,5
+		//alert(aRr);
+		aRr.pop(); //弹出 1,2,3,4
+		//alert(aRr);
+
+		// unshift和shift表示从数组前面添加或删除元素
+		aRr.unshift(0);
+		//alert(aRr); //弹出 0,1,2,3,4
+		aRr.shift();
+		//alert(aRr); //弹出1,2,3,4
+		
+		// 将数组倒序
+		aRr.reverse(); //弹出4,3,2,1
+
+
+		var aRr2 = ['a','b','c','d','a','b','c','d'];
+		// 查找元素b第一次出现的索引值
+		var num = aRr2.indexOf('b');
+		alert(num); //弹出 1
+
+		// 表示从序号为2的元素开始，删1个,然后填充一个e
+		aRr2.splice(2,1,'e'); 
+		alert(aRr2); //弹出 a,b,e,d,a,b,c,d
+
+		aRr2.splice(4,4,'f','g','h','i');
+		alert(aRr2);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

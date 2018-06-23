@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js通过标签获取元素</title>
+	<script type="text/javascript">
+		window.onload = function(){
+
+			var oList = document.getElementById('list01');
+
+			// 这样就不会在全文搜索了，只在当前id标签内有效
+			// aLi是一个选择集，并不是一个集合
+			var aLi = oList.getElementsByTagName('li');
+
+			//alert(aLi.lenth);
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].style.background = 'gold';
+			}
+		}
+	</script>
+</head>
+<body>
+	<ul id="list01">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+	</ul>
+
+	<ul id="list02">
+		<li>9</li>
+		<li>10</li>
+		<li>11</li>
+	</ul>
+</body>
+</html>

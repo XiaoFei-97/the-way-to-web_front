@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>工厂模式</title>
+	<script type="text/javascript">
+		
+		function Person(name,age,job){
+			
+			// 创建一个空对象
+			var o = new Object();
+			// 也可以这样写
+			// var o = {};
+			o.name = name;
+			o.age = age;
+			o.job = job;
+
+			o.showname = function(){
+				alert(this.name);
+			}
+			o.showage = function(){
+				alert(this.age);
+			}
+			o.showjob = function(){
+				alert(this.job);
+			}
+
+			return o;
+		}
+
+		// 创建了一个Tom的实例化对象
+		var Tom = Person('tom',18,'engineer');
+		var Jack = Person('jack',19,'boss');
+
+		Tom.showjob();
+		Jack.showage();
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

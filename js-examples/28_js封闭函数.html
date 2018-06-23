@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>封闭函数</title>
+	<script type="text/javascript">
+		
+		// function myalret(){
+		// 	var str = '欢迎访问我的主页!';
+		// 	alert(str);
+		// }
+		// myalert();
+
+		// 省去了一个函数名
+		(function (){
+			var str = '欢迎访问我的主页!';
+			alert(str);
+		})();
+
+		// 封闭函数的定义: (function (){.....})();
+		// 其他写法: 在匿名函数前加!或者~,之后加括号
+		!function(){
+			var str = '欢迎访问我的主页!';
+			alert(str);
+		}(); 
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

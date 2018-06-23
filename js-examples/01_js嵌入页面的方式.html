@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js嵌入页面的方式</title>
+	
+	<!-- 第三种嵌入js的方式:外链式 -->
+	<script type="text/javascript" src="hello.js"></script>
+
+
+	<!-- 第二种js的嵌入方式:嵌入式,且是按照顺序直接运行 -->
+	<!-- alert是js内部的一个函数,表示弹出信息 -->
+	<script type="text/javascript">
+		alert('hello,again!');
+	</script>
+</head>
+<body>
+	<!-- 第一种嵌入js的方式,onclick表示点击弹框alert是js的行间事件 -->
+	<!-- 不推荐 -->
+	<input type="button" name="" value="弹框" onclick="alert('hello')">
+</body>
+</html>

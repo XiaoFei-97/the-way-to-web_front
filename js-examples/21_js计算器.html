@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+	<script type="text/javascript">
+		
+		window.onload = function(){
+			var oIn1 = document.getElementById('input1');
+			var oIn2 = document.getElementById('input2');
+
+			var oSel = document.getElementById('sel');
+			var oBtn = document.getElementById('btn');
+
+			oBtn.onclick = function(){
+				// 赋值语句要写在这个匿名函数内
+				var num1 = oIn1.value;
+				var num2 = oIn2.value;
+				var symbol = oSel.value;
+
+
+				// 必须要保证用户输入合法,即输入框不为空也不能为字符串
+				if(num1=="" || num2==""){
+					alert('输入框不能为空!');
+					return;
+				}
+				if(isNaN(num1)|| isNaN(num2)){
+					alert('请输入数字!');
+					return;
+				}
+
+				var answer = calc(parseFloat(num1),parseFloat(num2),symbol);
+				alert(answer);
+			}
+
+			function calc(a,b,c){
+				switch(c){
+					// 也可以将option定义为0,1,2,3,那么case的情况就可以分为0，1,2,3
+					// 也要注意在数字计算时最好使用parseFloat转化一下，还有乘以100再除以100来保证精确性
+					case '+':
+						var finl = (a*100+b*100)/100;break;
+					case '-':
+						var finl = (a*100-b*100)/100;break;
+					case '*':
+						var finl = (a*100*b*100)/100;break;
+					case '/':
+						var finl = (a*100/b*100)/100;break;
+				}
+				return finl;
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="input1" placeholder="请输入第一个数值">
+	<select id="sel">
+		<option>+</option>
+		<option>-</option>
+		<option>*</option>
+		<option>/</option>
+	</select>
+	<input type="text" name="" id="input2" placeholder="请输入第二个数值">
+	<input type="button" name="" value="计算" id="btn">
+</body>
+</html>

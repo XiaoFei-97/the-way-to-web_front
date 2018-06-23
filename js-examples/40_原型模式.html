@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型模式-成熟</title>
+	<script type="text/javascript">
+		
+		function Person(name,age,job){
+
+			this.name = name;
+			this.age = age;
+			this.job = job;
+		}
+
+		// 把方法绑定在原型的属性上面
+		// 尤其注意，这里的prototype的p是小写的
+		Person.prototype.showname = function(){
+			alert(this.name);
+		}
+		Person.prototype.showage = function(){
+			alert(this.age);
+		}
+		Person.prototype.showjob = function(){
+			alert(this.job);
+		}
+
+		var Tom = new Person('tom',15,'worker');
+
+		Tom.showage = function(){
+			alert('my age is'+this.age);
+		}
+		Tom.showage();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

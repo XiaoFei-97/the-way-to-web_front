@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery-jsonp</title>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+
+		// 把datatype改成jsonp就可以实现jquery的跨域请求
+		$.ajax({
+			url: 'data.js',
+			type: 'get',
+			dataType: 'jsonp',
+
+			// jsonpCallback要与json对上
+			jsonpCallback:'aa'
+		})
+		.done(function(data) {
+			alert(data);
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
+		
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

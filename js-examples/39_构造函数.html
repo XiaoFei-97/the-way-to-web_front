@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>构造函数</title>
+	<script type="text/javascript">
+		// 与工厂方法区别的是：1.除去第一步的创建空对象
+		// 				2.除去最后一步的return 空对象
+		function Person(name,age,job){
+			this.name = name;
+			this.age = age;
+			this.job = job;
+
+			this.showname = function(){
+
+				alert(this.name);
+
+			} 
+
+			this.showage = function(){
+				alert(this.age);
+			}
+
+			this.showjob = function(){
+				alert(this.job);
+			}
+		}
+
+		var Tom = new Person('tom',15,'worker');
+		var Jack = new Person('jack',22,'engineer');
+
+		Jack.showjob();
+
+		// 这里会弹出false，表示他们不是一个方法，所以原型模式才是比较正规的
+		alert(Jack.showjob==Tom.showjob);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

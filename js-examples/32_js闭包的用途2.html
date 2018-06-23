@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包的用途-私有变量计数器</title>
+	<script type="text/javascript">
+		var count = (function(){
+			var a = 1;
+			function bb(){
+				a++;
+				return a;
+			}
+			return bb;
+		})();
+
+		count();
+
+		alert(count());
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

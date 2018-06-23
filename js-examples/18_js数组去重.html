@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js数组去重</title>
+	<script type="text/javascript">
+		
+		var aRr = [1,2,3,2,1,4,3,2,4,6,3,2,1,4,2,];
+
+		var aRr2 = [];
+
+		for(var i=0;i<aRr.length;i++){
+
+			// 去重的重要思想就是利用了indexOf，如果是重复的话，那么元素的位置就不会等于当前的i值
+			if(aRr.indexOf(aRr[i])==i){
+				aRr2.push(aRr[i]);
+			}
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js函数传参</title>
+	<script type="text/javascript">
+		window.onload = function(){
+
+			var oDiv = document.getElementById('div1');
+
+			function changestyle(styl,val){
+
+				oDiv.style[styl] = val;
+			}
+
+			// 这里必须注意，属性要打上引号，否则会被当作变量
+			changestyle('color','red');
+			changestyle('background','gold');
+			changestyle('width','300px');
+			changestyle('height','300px');
+			changestyle('fontSize','30px');
+		}
+	</script>
+</head>
+<body>
+	<div id="div1">div元素</div>
+</body>
+</html>
